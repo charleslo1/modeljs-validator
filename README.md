@@ -1,5 +1,5 @@
 # modeljs-validate
-一个 modeljs 模型验证插件，基于 [async-validator](https://github.com/yiminghe/async-validator) 验证规则，为 modeljs 提供简单方便的模型属性验证 API，让数据验证更简单！✌️
+一个 [modeljs](https://github.com/charleslo1/modeljs) 模型验证插件，基于 [async-validator](https://github.com/yiminghe/async-validator) 验证规则，为 modeljs 提供简单方便的模型属性验证 API，让数据验证更简单！✌️
 
 # Install
 ```
