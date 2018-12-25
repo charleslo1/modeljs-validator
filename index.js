@@ -1,3 +1,3 @@
-import ModelValidate from './src/ModelValidate'
+const ModelValidate = require('./dist/modeljs-validator')
 
-export default ModelValidate
+module.exports = ModelValidate

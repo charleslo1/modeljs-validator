@@ -3,10 +3,10 @@ var commonjs = require('rollup-plugin-commonjs')
 var babel = require('rollup-plugin-babel')
 
 var baseConfig = {
-  input: 'index.js',
+  input: 'src/index.js',
   output: {
-    file: 'dist/modeljs-validate.js',
-    name: 'modeljsValidate',
+    file: 'dist/modeljs-validator.js',
+    name: 'modeljsValidator',
     format: 'umd',
     sourcemap: true
   },
