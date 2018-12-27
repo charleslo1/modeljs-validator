@@ -1,6 +1,6 @@
 {
   "name": "modeljs-validator",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "modeljs 模型验证插件，让数据验证更简单！",
   "main": "dist/modeljs-validator.js",
   "files": [

@@ -1,5 +1,5 @@
 # modeljs-validate
-一个 [modeljs](https://github.com/charleslo1/modeljs) 模型验证插件，基于 [async-validator](https://github.com/yiminghe/async-validator) 验证规则，为 modeljs 提供简单方便的模型属性验证 API，让数据验证更简单！✌️
+> 一个 [modeljs](https://github.com/charleslo1/modeljs) 模型验证插件，基于 [async-validator](https://github.com/yiminghe/async-validator) 验证规则，为 modeljs 提供简单方便的模型属性验证 API，让数据验证更简单！✌️
 
 # Install
 ```
@@ -7,6 +7,8 @@ npm install modeljs-validator --save
 ```
 
 # Usage
+
+##### 定义模型 User.js
 
 modeljs-validator 基于 async-validator开发，更多验证规则相关配置请参考 [async-validator](https://github.com/yiminghe/async-validator)
 
@@ -48,6 +50,11 @@ const User = Model.define('User', {
     rules: { type: 'enum', enum: [0, 1, 2], required: true, message: '请选择性别！' }
   }
 })
+```
+
+##### 常规验证
+``` js
+import User from './User'
 
 // 实例化模型
 var user = new User({
@@ -74,8 +81,12 @@ user.validate().then(() => {
     let err = errors.shift()
     if (err) alert(err.message)
 })
+```
 
-// 【关键代码】支持选择性验证（比如在用户登录场景下只需要验证用户名和密码即可）
+##### 选择性验证
+比如在用户登录场景下只需要验证用户名和密码即可
+``` js
+// 【关键代码】只验证用户名、密码
 user.validate(['username', 'password']).then(() => {
     console.log('验证成功')
 }).catch((errors) => {
